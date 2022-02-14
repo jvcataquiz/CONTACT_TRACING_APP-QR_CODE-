@@ -50,6 +50,7 @@ namespace ContactTracingApp_QR_
             {
                 buttonStart.Text = "START";
                 captureDevice.Stop();
+                pictureBoxCamera.Image = Image.FromFile("video-not-working.png");
             }
         }
 

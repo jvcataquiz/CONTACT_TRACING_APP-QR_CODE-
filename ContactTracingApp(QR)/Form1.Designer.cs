@@ -29,6 +29,7 @@ namespace ContactTracingApp_QR_
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBoxCamera = new System.Windows.Forms.PictureBox();
             this.buttonStart = new System.Windows.Forms.Button();
@@ -50,9 +51,11 @@ namespace ContactTracingApp_QR_
             // 
             this.pictureBoxCamera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBoxCamera.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBoxCamera.Location = new System.Drawing.Point(55, 49);
+            this.pictureBoxCamera.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxCamera.Image")));
+            this.pictureBoxCamera.Location = new System.Drawing.Point(55, 67);
             this.pictureBoxCamera.Name = "pictureBoxCamera";
-            this.pictureBoxCamera.Size = new System.Drawing.Size(427, 363);
+            this.pictureBoxCamera.Size = new System.Drawing.Size(427, 332);
+            this.pictureBoxCamera.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBoxCamera.TabIndex = 1;
             this.pictureBoxCamera.TabStop = false;
             // 
