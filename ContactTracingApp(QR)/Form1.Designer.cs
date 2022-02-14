@@ -45,9 +45,9 @@ namespace ContactTracingApp_QR_
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(12, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(108, 25);
+            this.label1.Size = new System.Drawing.Size(122, 25);
             this.label1.TabIndex = 0;
-            this.label1.Text = "CAMERA";
+            this.label1.Text = "CAMERA :";
             // 
             // pictureBoxCamera
             // 
@@ -81,7 +81,7 @@ namespace ContactTracingApp_QR_
             // 
             this.labelcamera.AutoSize = true;
             this.labelcamera.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelcamera.Location = new System.Drawing.Point(116, 21);
+            this.labelcamera.Location = new System.Drawing.Point(130, 22);
             this.labelcamera.Name = "labelcamera";
             this.labelcamera.Size = new System.Drawing.Size(76, 24);
             this.labelcamera.TabIndex = 3;
@@ -104,6 +104,7 @@ namespace ContactTracingApp_QR_
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Contact Traing App";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCamera)).EndInit();
             this.ResumeLayout(false);

@@ -68,10 +68,10 @@ namespace ContactTracingApp_QR_
         {
             ZXing.BarcodeReader qrReader = new ZXing.BarcodeReader { AutoRotate = true};
             ZXing.Result output = qrReader.Decode((Bitmap)pictureBoxCamera.Image);
-            
+            timerQRCODE.Stop();
             if (output != null)
             {
-                
+               
                 string path = "Cataquiz, Jerick.txt";
                 StreamWriter outputFile = File.AppendText(path);
                 outputFile.WriteLine("Date: " + DateTime.Now.ToString());
@@ -79,7 +79,14 @@ namespace ContactTracingApp_QR_
                 outputFile.Close();
                 MessageBox.Show(" Textfile Created Successfully!");
                 Process.Start("notepad.exe", "Cataquiz, Jerick.txt");
+                
+
             }
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            cameraDisplay.Stop();
         }
     }
 }
