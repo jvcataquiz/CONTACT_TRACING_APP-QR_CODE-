@@ -8,16 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AForge.Video.DirectShow;
+using System.IO;
 using AForge;
 using ZXing;
+using ZXing.QrCode;
 using ZXing.Aztec;
 
 namespace ContactTracingApp_QR_
 {
     public partial class Form1 : Form
     {
-        private FilterInfoCollection filterInfoCollection;
-        private VideoCaptureDevice captureDevice;
+        FilterInfoCollection videocamCollection;
+        VideoCaptureDevice  cameraDisplay;
         int filter;
         public Form1()
         {
@@ -27,8 +29,8 @@ namespace ContactTracingApp_QR_
         private void Form1_Load(object sender, EventArgs e)
         {
 
-            filterInfoCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
-            foreach (FilterInfo filterInfo in filterInfoCollection)
+            videocamCollection = new FilterInfoCollection(FilterCategory.VideoInputDevice);
+            foreach (FilterInfo filterInfo in videocamCollection)
             {
                 labelcamera.Text = filterInfo.Name;
                 filter = 0 ;
@@ -40,16 +42,18 @@ namespace ContactTracingApp_QR_
             
             if (buttonStart.Text == "START")
             {
-                captureDevice = new VideoCaptureDevice(filterInfoCollection[filter].MonikerString);
-                captureDevice.NewFrame += CaptureDevice_NewFrame;
-                captureDevice.Start();
+                cameraDisplay = new VideoCaptureDevice(videocamCollection[filter].MonikerString);
+                cameraDisplay.NewFrame += CaptureDevice_NewFrame;
+                cameraDisplay.Start();
+                timerQRCODE.Start();
                 buttonStart.Text = "STOP";
 
             }
             else if (buttonStart.Text == "STOP")
             {
                 buttonStart.Text = "START";
-                captureDevice.Stop();
+                cameraDisplay.Stop();
+                timerQRCODE.Stop();
                 pictureBoxCamera.Image = Image.FromFile("video-not-working.png");
             }
         }
@@ -57,6 +61,18 @@ namespace ContactTracingApp_QR_
         private void CaptureDevice_NewFrame(object sender, AForge.Video.NewFrameEventArgs eventArgs)
         {
             pictureBoxCamera.Image = (Bitmap)eventArgs.Frame.Clone();
+        }
+
+        private void timerQRCODE_Tick(object sender, EventArgs e)
+        {
+            ZXing.BarcodeReader qrReader = new ZXing.BarcodeReader { AutoRotate = true};
+            ZXing.Result output = qrReader.Decode((Bitmap)pictureBoxCamera.Image);
+            
+            if (output != null)
+            {
+                richTextBox1.Text = output.ToString().Trim();
+
+            }
         }
     }
 }
