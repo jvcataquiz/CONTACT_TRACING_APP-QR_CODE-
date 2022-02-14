@@ -7,13 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Diagnostics;
-using AForge.Video.DirectShow;
-using System.IO;
-using AForge;
-using ZXing;
-using ZXing.QrCode;
-using ZXing.Aztec;
+using System.Diagnostics; // for opening textfile
+using AForge.Video.DirectShow; // image processing
+using System.IO; // read and write of text file
+using AForge; // image processing
+using ZXing; // qrcode reader
+using ZXing.Aztec; //qrcodde reader
 
 namespace ContactTracingApp_QR_
 {
@@ -66,7 +65,7 @@ namespace ContactTracingApp_QR_
 
         private void timerQRCODE_Tick(object sender, EventArgs e)
         {
-            ZXing.BarcodeReader qrReader = new ZXing.BarcodeReader { AutoRotate = true};
+            ZXing.BarcodeReader qrReader = new ZXing.BarcodeReader();
             ZXing.Result output = qrReader.Decode((Bitmap)pictureBoxCamera.Image);
            
             if (output != null)
@@ -85,8 +84,6 @@ namespace ContactTracingApp_QR_
                 
             }
         }
-
-        
 
         private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
