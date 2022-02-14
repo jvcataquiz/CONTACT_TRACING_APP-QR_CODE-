@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Diagnostics;
 using AForge.Video.DirectShow;
 using System.IO;
 using AForge;
@@ -70,8 +71,14 @@ namespace ContactTracingApp_QR_
             
             if (output != null)
             {
-                richTextBox1.Text = output.ToString().Trim();
-
+                
+                string path = "Cataquiz, Jerick.txt";
+                StreamWriter outputFile = File.CreateText(path);
+                outputFile.WriteLine("Date: " + DateTime.Now.ToString());
+                outputFile.WriteLine(output.ToString());
+                outputFile.Close();
+                MessageBox.Show(" Textfile Created Successfully!");
+                Process.Start("notepad.exe", "Cataquiz, Jerick.txt");
             }
         }
     }

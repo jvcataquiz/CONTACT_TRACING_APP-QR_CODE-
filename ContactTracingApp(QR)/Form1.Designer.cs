@@ -36,7 +36,6 @@ namespace ContactTracingApp_QR_
             this.buttonStart = new System.Windows.Forms.Button();
             this.labelcamera = new System.Windows.Forms.Label();
             this.timerQRCODE = new System.Windows.Forms.Timer(this.components);
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCamera)).BeginInit();
             this.SuspendLayout();
             // 
@@ -94,20 +93,11 @@ namespace ContactTracingApp_QR_
             this.timerQRCODE.Interval = 1000;
             this.timerQRCODE.Tick += new System.EventHandler(this.timerQRCODE_Tick);
             // 
-            // richTextBox1
-            // 
-            this.richTextBox1.Location = new System.Drawing.Point(561, 119);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(174, 202);
-            this.richTextBox1.TabIndex = 4;
-            this.richTextBox1.Text = "";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(777, 483);
-            this.Controls.Add(this.richTextBox1);
+            this.ClientSize = new System.Drawing.Size(538, 482);
             this.Controls.Add(this.labelcamera);
             this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.pictureBoxCamera);
@@ -128,7 +118,6 @@ namespace ContactTracingApp_QR_
         private System.Windows.Forms.Button buttonStart;
         private System.Windows.Forms.Label labelcamera;
         private System.Windows.Forms.Timer timerQRCODE;
-        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
 

@@ -18,3 +18,7 @@ C:\Users\Jv Cataquiz\source\repos\Contact_TracingApp\ContactTracingApp(QR)\obj\D
 C:\Users\Jv Cataquiz\source\repos\Contact_TracingApp\ContactTracingApp(QR)\obj\Debug\ContactTracingApp(QR).csproj.CoreCompileInputs.cache
 C:\Users\Jv Cataquiz\source\repos\Contact_TracingApp\ContactTracingApp(QR)\obj\Debug\ContactTracingApp(QR).exe
 C:\Users\Jv Cataquiz\source\repos\Contact_TracingApp\ContactTracingApp(QR)\obj\Debug\ContactTracingApp(QR).pdb
+C:\Users\Jv Cataquiz\source\repos\Contact_TracingApp\ContactTracingApp(QR)\bin\Debug\AForge.Imaging.dll
+C:\Users\Jv Cataquiz\source\repos\Contact_TracingApp\ContactTracingApp(QR)\bin\Debug\AForge.Math.dll
+C:\Users\Jv Cataquiz\source\repos\Contact_TracingApp\ContactTracingApp(QR)\bin\Debug\AForge.Imaging.xml
+C:\Users\Jv Cataquiz\source\repos\Contact_TracingApp\ContactTracingApp(QR)\bin\Debug\AForge.Math.xml
