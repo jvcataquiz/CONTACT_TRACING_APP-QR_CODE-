@@ -1,0 +1,5 @@
+C:\Users\Jv Cataquiz\source\repos\Contact_TracingApp\ContactTracingApp(QR)\obj\Release\ContactTracingApp(QR).csproj.AssemblyReference.cache
+C:\Users\Jv Cataquiz\source\repos\Contact_TracingApp\ContactTracingApp(QR)\obj\Release\ContactTracingApp_QR_.Form1.resources
+C:\Users\Jv Cataquiz\source\repos\Contact_TracingApp\ContactTracingApp(QR)\obj\Release\ContactTracingApp_QR_.Properties.Resources.resources
+C:\Users\Jv Cataquiz\source\repos\Contact_TracingApp\ContactTracingApp(QR)\obj\Release\ContactTracingApp(QR).csproj.GenerateResource.cache
+C:\Users\Jv Cataquiz\source\repos\Contact_TracingApp\ContactTracingApp(QR)\obj\Release\ContactTracingApp(QR).csproj.CoreCompileInputs.cache

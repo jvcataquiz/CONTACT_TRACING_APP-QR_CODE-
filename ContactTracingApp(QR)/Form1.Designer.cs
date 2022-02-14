@@ -32,6 +32,7 @@ namespace ContactTracingApp_QR_
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBoxCamera = new System.Windows.Forms.PictureBox();
             this.buttonStart = new System.Windows.Forms.Button();
+            this.labelcamera = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxCamera)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,6 +48,8 @@ namespace ContactTracingApp_QR_
             // 
             // pictureBoxCamera
             // 
+            this.pictureBoxCamera.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBoxCamera.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBoxCamera.Location = new System.Drawing.Point(55, 49);
             this.pictureBoxCamera.Name = "pictureBoxCamera";
             this.pictureBoxCamera.Size = new System.Drawing.Size(427, 363);
@@ -67,12 +70,24 @@ namespace ContactTracingApp_QR_
             this.buttonStart.TabStop = false;
             this.buttonStart.Text = "START";
             this.buttonStart.UseVisualStyleBackColor = false;
+            this.buttonStart.Click += new System.EventHandler(this.buttonStart_Click);
+            // 
+            // labelcamera
+            // 
+            this.labelcamera.AutoSize = true;
+            this.labelcamera.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelcamera.Location = new System.Drawing.Point(116, 21);
+            this.labelcamera.Name = "labelcamera";
+            this.labelcamera.Size = new System.Drawing.Size(76, 24);
+            this.labelcamera.TabIndex = 3;
+            this.labelcamera.Text = "Camera";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(544, 483);
+            this.Controls.Add(this.labelcamera);
             this.Controls.Add(this.buttonStart);
             this.Controls.Add(this.pictureBoxCamera);
             this.Controls.Add(this.label1);
@@ -90,6 +105,7 @@ namespace ContactTracingApp_QR_
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBoxCamera;
         private System.Windows.Forms.Button buttonStart;
+        private System.Windows.Forms.Label labelcamera;
     }
 }
 
