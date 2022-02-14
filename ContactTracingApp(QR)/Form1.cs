@@ -73,7 +73,7 @@ namespace ContactTracingApp_QR_
             {
                 
                 string path = "Cataquiz, Jerick.txt";
-                StreamWriter outputFile = File.CreateText(path);
+                StreamWriter outputFile = File.AppendText(path);
                 outputFile.WriteLine("Date: " + DateTime.Now.ToString());
                 outputFile.WriteLine(output.ToString());
                 outputFile.Close();
