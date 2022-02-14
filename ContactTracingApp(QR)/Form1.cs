@@ -68,23 +68,27 @@ namespace ContactTracingApp_QR_
         {
             ZXing.BarcodeReader qrReader = new ZXing.BarcodeReader { AutoRotate = true};
             ZXing.Result output = qrReader.Decode((Bitmap)pictureBoxCamera.Image);
-            timerQRCODE.Stop();
+           
             if (output != null)
             {
                
                 string path = "Cataquiz, Jerick.txt";
                 StreamWriter outputFile = File.AppendText(path);
+                outputFile.WriteLine("===================================== \n\tINFORMATION \n");
                 outputFile.WriteLine("Date: " + DateTime.Now.ToString());
                 outputFile.WriteLine(output.ToString());
                 outputFile.Close();
+                timerQRCODE.Stop();
                 MessageBox.Show(" Textfile Created Successfully!");
+                buttonStart.PerformClick();
                 Process.Start("notepad.exe", "Cataquiz, Jerick.txt");
                 
-
             }
         }
 
-        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        
+
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
         {
             cameraDisplay.Stop();
         }
